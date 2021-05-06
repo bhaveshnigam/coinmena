@@ -132,3 +132,10 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 ALPHA_VANTAGE_API_KEY = os.environ['ALPHA_VANTAGE_API_KEY']
+
+
+REST_FRAMEWORK = {
+    'DEFAULT_RENDERER_CLASSES': [
+        'rest_framework.renderers.JSONRenderer',
+    ],
+}
