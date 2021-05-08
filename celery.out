@@ -1,0 +1,38 @@
+[2021-05-08 09:05:02,785: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@rabbitmq:5672//: [Errno 111] Connection refused.
+Trying again in 2.00 seconds... (1/100)
+
+[2021-05-08 09:05:03,438: INFO/Beat] beat: Starting...
+[2021-05-08 09:05:04,805: INFO/MainProcess] Connected to amqp://guest:**@rabbitmq:5672//
+[2021-05-08 09:05:04,823: INFO/MainProcess] mingle: searching for neighbors
+[2021-05-08 09:05:05,863: INFO/MainProcess] mingle: all alone
+[2021-05-08 09:05:05,895: WARNING/MainProcess] /usr/local/lib/python3.8/site-packages/celery/fixups/django.py:203: UserWarning: Using settings.DEBUG leads to a memory
+            leak, never use this setting in production environments!
+  warnings.warn('''Using settings.DEBUG leads to a memory
+
+[2021-05-08 09:05:05,897: INFO/MainProcess] celery@3ac11fbe9571 ready.
+[2021-05-08 09:10:29,419: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@rabbitmq:5672//: [Errno 111] Connection refused.
+Trying again in 2.00 seconds... (1/100)
+
+[2021-05-08 09:10:30,529: INFO/Beat] beat: Starting...
+[2021-05-08 09:10:31,432: INFO/MainProcess] Connected to amqp://guest:**@rabbitmq:5672//
+[2021-05-08 09:10:31,448: INFO/MainProcess] mingle: searching for neighbors
+[2021-05-08 09:10:32,485: INFO/MainProcess] mingle: all alone
+[2021-05-08 09:10:32,510: WARNING/MainProcess] /usr/local/lib/python3.8/site-packages/celery/fixups/django.py:203: UserWarning: Using settings.DEBUG leads to a memory
+            leak, never use this setting in production environments!
+  warnings.warn('''Using settings.DEBUG leads to a memory
+
+[2021-05-08 09:10:32,511: INFO/MainProcess] celery@3ac11fbe9571 ready.
+[2021-05-08 09:10:50,634: INFO/Beat] DatabaseScheduler: Schedule changed.
+[2021-05-08 09:10:55,629: INFO/Beat] DatabaseScheduler: Schedule changed.
+[2021-05-08 09:11:55,654: INFO/Beat] Scheduler: Sending due task Fetch rates for BTC to USD (rates.tasks.fetch_latest_rate_btc_to_usd)
+[2021-05-08 09:11:55,664: INFO/MainProcess] Received task: rates.tasks.fetch_latest_rate_btc_to_usd[59a7a8aa-9365-401c-b952-cf22dedb338b]  
+[2021-05-08 09:11:57,104: WARNING/ForkPoolWorker-8] /usr/local/lib/python3.8/site-packages/django/db/models/fields/__init__.py:1416: RuntimeWarning: DateTimeField Rate.last_refreshed received a naive datetime (2021-05-08 09:11:08) while time zone support is active.
+  warnings.warn("DateTimeField %s received a naive datetime (%s)"
+
+[2021-05-08 09:11:57,114: INFO/ForkPoolWorker-8] Task rates.tasks.fetch_latest_rate_btc_to_usd[59a7a8aa-9365-401c-b952-cf22dedb338b] succeeded in 1.447377200001938s: None
+[2021-05-08 09:12:55,646: INFO/Beat] Scheduler: Sending due task Fetch rates for BTC to USD (rates.tasks.fetch_latest_rate_btc_to_usd)
+[2021-05-08 09:12:55,649: INFO/MainProcess] Received task: rates.tasks.fetch_latest_rate_btc_to_usd[d375b7dd-ece9-47fc-aaa1-1b5f3fea9276]  
+[2021-05-08 09:12:56,613: WARNING/ForkPoolWorker-8] /usr/local/lib/python3.8/site-packages/django/db/models/fields/__init__.py:1416: RuntimeWarning: DateTimeField Rate.last_refreshed received a naive datetime (2021-05-08 09:12:01) while time zone support is active.
+  warnings.warn("DateTimeField %s received a naive datetime (%s)"
+
+[2021-05-08 09:12:56,621: INFO/ForkPoolWorker-8] Task rates.tasks.fetch_latest_rate_btc_to_usd[d375b7dd-ece9-47fc-aaa1-1b5f3fea9276] succeeded in 0.9693841999978758s: None

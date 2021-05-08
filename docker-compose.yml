@@ -3,7 +3,7 @@ version: '3.7'
 services:
   web:
     build: ./
-    command: bash -c "python manage.py migrate && python manage.py runserver 0.0.0.0:8000"
+    command: bash -c "python manage.py migrate && celery -A coinmena worker -B -l info -D -f celery.out && python manage.py runserver 0.0.0.0:8000"
     volumes:
       - .:/usr/src/coinmena/
     ports:
@@ -12,6 +12,7 @@ services:
       - ./.env
     depends_on:
       - db
+      - rabbitmq
   db:
     image: postgres:12.0-alpine
     environment:
@@ -20,6 +21,12 @@ services:
       - POSTGRES_DB=coinmena
     volumes:
       - postgres-data:/var/lib/postgresql/data
+  rabbitmq:
+    container_name: rabbitmq
+    hostname: rabbitmq
+    image: rabbitmq:latest
+    ports:
+      - "5672:5672"
 
 volumes:
   postgres-data:
